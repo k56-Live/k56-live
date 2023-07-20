@@ -1,0 +1,11 @@
+version: '3'
+services:
+  content_aggregation:
+    build:
+      context: ./content_aggregation
+    image: your_registry/content_aggregation:latest
+
+  database:
+    build:
+      context: ./database
+    image: your_registry/database:latest
