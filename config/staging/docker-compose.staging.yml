@@ -1,0 +1,24 @@
+# Docker Compose for Staging
+
+version: '3'
+services:
+  database:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: mydb_staging
+      POSTGRES_USER: staging_user
+      POSTGRES_PASSWORD: staging_password
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  api:
+    image: your_registry/user_authentication:latest
+    environment:
+      DATABASE_HOST: staging_db.example.com
+      DATABASE_PORT: 5432
+      DATABASE_NAME: mydb_staging
+      DATABASE_USER: staging_user
+      DATABASE_PASSWORD: staging_password
+
+volumes:
+  db_data:
