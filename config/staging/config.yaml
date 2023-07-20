@@ -1,0 +1,11 @@
+# Staging Configuration
+
+database:
+  host: staging_db.example.com
+  port: 5432
+  name: mydb_staging
+  username: staging_user
+  password: staging_password
+
+api:
+  base_url: https://staging.example.com/api
