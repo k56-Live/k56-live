@@ -1,0 +1,4 @@
+# App Configuration
+
+api_url: https://api.example.com
+log_level: debug
