@@ -1,0 +1,11 @@
+# Production Configuration
+
+database:
+  host: prod_db.example.com
+  port: 5432
+  name: mydb_prod
+  username: prod_user
+  password: prod_password
+
+api:
+  base_url: https://api.example.com
